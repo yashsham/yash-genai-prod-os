@@ -1,0 +1,29 @@
+roles:
+  admin:
+    permissions: ["*"]
+    max_daily_budget: 100.00
+  
+  analyst:
+    permissions:
+      - "tool:calculator"
+      - "tool:search"
+      - "read:reports"
+    max_daily_budget: 10.00
+
+  intern:
+    permissions:
+      - "tool:calculator"
+    max_daily_budget: 1.00
+
+tools:
+  calculator:
+    risk_level: "low"
+    requires_approval: false
+  
+  search:
+    risk_level: "medium"
+    requires_approval: false
+  
+  format_disk:
+    risk_level: "critical"
+    requires_approval: true
